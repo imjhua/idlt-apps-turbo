@@ -1,0 +1,65 @@
+vehicleStatus:
+  NORMAL:
+    background: bg-normal
+    text: text-normal2
+  ABNORMAL:
+    background: bg-abnormal
+    text: text-abnormal2
+
+callStatus:
+  DISPATCHING:
+    background: bg-default
+    text: text-default2
+  RESERVING:
+    background: bg-default
+    text: text-default2
+  DISPATCHED:
+    background: bg-default
+    text: text-default2
+  RESERVED:
+    background: bg-default
+    text: text-default2
+  PASSENGER_WAITING:
+    background: bg-default
+    text: text-default2
+  DRIVING:
+    background: bg-driving
+    text: text-driving2
+    status: bg-driving2
+  DRIVING_COMPLETED:
+    background: bg-completed
+    text: text-completed2
+  CANCELED_BEFORE_DISPATCH:
+    background: bg-cancel
+    text: text-2
+  DISPATCHING_FAILED:
+    background: bg-cancel
+    text: text-2
+  CANCELED_AFTER_DISPATCH:
+    background: bg-cancel
+    text: text-2
+  REJECT_AFTER_DISPATCH:
+    background: bg-cancel
+    text: text-2
+  TERMINATED_BY_PASSENGER:
+    background: bg-passenger-stop
+    text: text-passenger-stop2
+  TERMINATED_BY_DRIVER:
+    background: bg-driver-stop
+    text: text-driver-stop2
+
+vehicleModelStatus:
+  활성:
+    background: bg-tweb-primary1
+    text: text-primary-foreground
+  비활성:
+    background: bg-tweb-neutral3
+    text: text-primary-foreground
+
+iconVehicleStatus:
+  NORMAL:
+    background: bg-tweb-primary7
+    text: text-tweb-white
+  ABNORMAL:
+    background: bg-tweb-primary5
+    text: text-tweb-white

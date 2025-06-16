@@ -1,0 +1,24 @@
+{
+  "name": "@repo/request",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./*": "./*.ts"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.3",
+    "qs": "^6.14.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/qs": "^6.9.18",
+    "typescript": "^5.7.3"
+  }
+}
