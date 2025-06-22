@@ -1,52 +1,52 @@
-import { Label } from '@repo/ui/label';
-import { addDays, format, parse, subDays } from 'date-fns';
-import { useQueryState } from 'nuqs';
-import { DateRange } from 'react-day-picker';
+import { Label } from '@repo/ui/label'
+import { addDays, format, parse, subDays } from 'date-fns'
+import { useQueryState } from 'nuqs'
+import { DateRange } from 'react-day-picker'
 
-import { DatePickerWithRange } from '@/components/DatePicker/DateRangePicker';
-import { FilterItemStyle } from '@/components/FilterStyle';
-import { DATE_FORMAT } from '@/lib/utils';
+import { DatePickerWithRange } from '@/components/DatePicker/DateRangePicker'
+import { FilterItemStyle } from '@/components/FilterStyle'
+import { DATE_FORMAT } from '@/lib/utils'
 
 type UseQueryParamsRangePickerProps = {
-  defaultFrom?: Date;
-  defaultTo?: Date;
-};
+  defaultFrom?: Date
+  defaultTo?: Date
+}
 
 export default function useQueryParamsDateRangePicker(): [
   { fromDate: Date; toDate: Date },
   () => JSX.Element,
-];
+]
 export default function useQueryParamsDateRangePicker(
   props: UseQueryParamsRangePickerProps,
-): [{ fromDate: Date; toDate: Date }, () => JSX.Element];
+): [{ fromDate: Date; toDate: Date }, () => JSX.Element]
 
 export default function useQueryParamsDateRangePicker(
   props?: UseQueryParamsRangePickerProps,
 ): [{ fromDate: Date; toDate: Date }, () => JSX.Element] {
-  const { defaultFrom = subDays(new Date(), 7), defaultTo = addDays(new Date(), 0) } = props ?? {};
+  const { defaultFrom = subDays(new Date(), 7), defaultTo = addDays(new Date(), 0) } = props ?? {}
 
   const [queryFrom, setQueryFrom] = useQueryState('fromDate', {
     defaultValue: format(defaultFrom, DATE_FORMAT),
-  });
+  })
   const [queryTo, setQueryTo] = useQueryState('toDate', {
     defaultValue: format(defaultTo, DATE_FORMAT),
-  });
+  })
 
   const handleDateSelect = (date: DateRange | undefined) => {
     if (!date) {
-      setQueryFrom(queryFrom);
-      setQueryTo(queryFrom);
-      return;
+      setQueryFrom(queryFrom)
+      setQueryTo(queryFrom)
+      return
     }
 
-    const { from, to } = date;
+    const { from, to } = date
     if (from) {
-      setQueryFrom(format(from, DATE_FORMAT));
+      setQueryFrom(format(from, DATE_FORMAT))
     }
     if (to) {
-      setQueryTo(format(to, DATE_FORMAT));
+      setQueryTo(format(to, DATE_FORMAT))
     }
-  };
+  }
 
   const renderQueryParamsRangePicker = () => (
     <FilterItemStyle>
@@ -59,7 +59,7 @@ export default function useQueryParamsDateRangePicker(
         onSelectDate={handleDateSelect}
       />
     </FilterItemStyle>
-  );
+  )
 
   return [
     {
@@ -67,5 +67,5 @@ export default function useQueryParamsDateRangePicker(
       toDate: parse(queryTo, DATE_FORMAT, new Date()),
     },
     renderQueryParamsRangePicker,
-  ];
+  ]
 }

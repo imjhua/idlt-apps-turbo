@@ -1,33 +1,33 @@
-import { HTTP_STATUS, HTTP_STATUS_MESSAGES } from '@repo/request/httpStatusCodes';
-import { IconName } from 'lucide-react/dynamic';
-import { NextResponse } from 'next/server';
-import { AppError } from '@/errors';
-import { MenusConfigType } from '@/types/menu';
-import menusConfig from './menus.yaml';
+import { HTTP_STATUS, HTTP_STATUS_MESSAGES } from '@repo/request/httpStatusCodes'
+import { IconName } from 'lucide-react/dynamic'
+import { NextResponse } from 'next/server'
+import { AppError } from '@/errors'
+import { MenusConfigType } from '@/types/menu'
+import menusConfig from './menus.yaml'
 
 type SuccessResponse = {
   menus: {
-    name: string;
-    icon: IconName;
+    name: string
+    icon: IconName
     sub_menus: readonly {
-      name: string;
-      path: string;
-    }[];
-  }[];
-};
+      name: string
+      path: string
+    }[]
+  }[]
+}
 
 type FailResponse = {
-  message: string;
-};
+  message: string
+}
 
-type ResponseData = SuccessResponse | FailResponse;
+type ResponseData = SuccessResponse | FailResponse
 
 export async function GET(request: Request): Promise<NextResponse<ResponseData>> {
   try {
-    const menus = (menusConfig as MenusConfigType).menus;
-    return NextResponse.json({ menus });
+    const menus = (menusConfig as MenusConfigType).menus
+    return NextResponse.json({ menus })
   } catch (error) {
-    console.log(error);
+    console.log(error)
 
     return NextResponse.json(
       {
@@ -38,8 +38,8 @@ export async function GET(request: Request): Promise<NextResponse<ResponseData>>
         details: error instanceof AppError && error.details ? error.details : null,
       },
       { status: error instanceof AppError ? error.statusCode : HTTP_STATUS.INTERNAL_SERVER_ERROR },
-    );
+    )
   }
 }
 
-const excludedAuthPaths = ['/', '/profile'];
+const excludedAuthPaths = ['/', '/profile']

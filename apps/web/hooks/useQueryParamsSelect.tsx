@@ -1,4 +1,4 @@
-import { Label } from '@repo/ui/label';
+import { Label } from '@repo/ui/label'
 import {
   Select,
   SelectContent,
@@ -6,12 +6,12 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@repo/ui/select';
-import { useQueryState } from 'nuqs';
-import { ReactNode } from 'react';
+} from '@repo/ui/select'
+import { useQueryState } from 'nuqs'
+import { ReactNode } from 'react'
 
-import { FilterItemStyle } from '@/components/FilterStyle';
-import { cn } from '@/lib/utils';
+import { FilterItemStyle } from '@/components/FilterStyle'
+import { cn } from '@/lib/utils'
 
 export default function useQueryParamsSelect({
   key,
@@ -21,21 +21,21 @@ export default function useQueryParamsSelect({
   defaultValue = '',
   disabled = false,
 }: {
-  key: string;
-  label?: string;
-  placeholder?: string;
+  key: string
+  label?: string
+  placeholder?: string
   options: {
-    label: ReactNode;
-    value: string;
-  }[];
-  defaultValue?: string;
-  disabled?: boolean;
+    label: ReactNode
+    value: string
+  }[]
+  defaultValue?: string
+  disabled?: boolean
 }): [string, (className?: string) => JSX.Element] {
-  const [query, setQuery] = useQueryState(key, { defaultValue });
+  const [query, setQuery] = useQueryState(key, { defaultValue })
 
   const onChange = (value: string) => {
-    setQuery(value);
-  };
+    setQuery(value)
+  }
 
   const renderQueryParamsSelect = (className?: string) => (
     <FilterItemStyle>
@@ -48,7 +48,7 @@ export default function useQueryParamsSelect({
         disabled={disabled}
         value={options.length > 0 ? query : undefined}
         onValueChange={(value) => {
-          onChange(value);
+          onChange(value)
         }}
       >
         <SelectTrigger className={cn(className)} disabled={options.length === 0}>
@@ -64,13 +64,13 @@ export default function useQueryParamsSelect({
                 <SelectItem value={value} key={index}>
                   {label}
                 </SelectItem>
-              );
+              )
             })}
           </SelectGroup>
         </SelectContent>
       </Select>
     </FilterItemStyle>
-  );
+  )
 
-  return [query, renderQueryParamsSelect];
+  return [query, renderQueryParamsSelect]
 }

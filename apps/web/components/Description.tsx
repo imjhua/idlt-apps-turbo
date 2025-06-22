@@ -1,14 +1,14 @@
-import { ReactNode } from 'react';
+import { ReactNode } from 'react'
 
 type DescriptionProps = {
-  title?: string;
-  titleElement?: ReactNode;
+  title?: string
+  titleElement?: ReactNode
   items: {
-    label: string;
-    value: ReactNode | string;
-  }[];
-  className?: string;
-};
+    label: string
+    value: ReactNode | string
+  }[]
+  className?: string
+}
 export function Description({ className, title, titleElement, items }: DescriptionProps) {
   return (
     <div className={className}>
@@ -23,9 +23,9 @@ export function Description({ className, title, titleElement, items }: Descripti
               <div className="w-[136px] group-data-[state=open]:w-[116px] flex-none">{label}</div>
               <div className="flex-1">{value || '-'}</div>
             </li>
-          );
+          )
         })}
       </ul>
     </div>
-  );
+  )
 }

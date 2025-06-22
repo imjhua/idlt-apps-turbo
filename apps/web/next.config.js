@@ -36,9 +36,9 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.ya?ml$/,
       use: 'yaml-loader',
-    });
-    return config;
+    })
+    return config
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig

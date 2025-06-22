@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { Button } from '@repo/ui/button';
-import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
-import { ReactNode, useMemo } from 'react';
+import { Button } from '@repo/ui/button'
+import { ChevronRight } from 'lucide-react'
+import Link from 'next/link'
+import { ReactNode, useMemo } from 'react'
 
-import { isInternalAdmin } from '@/lib/utils';
+import { isInternalAdmin } from '@/lib/utils'
 
 type InternalOnlyLinkProps = {
-  children: ReactNode;
-  url: string;
-};
+  children: ReactNode
+  url: string
+}
 
 export default function GoToLink({ children, url }: InternalOnlyLinkProps) {
   return (
@@ -20,5 +20,5 @@ export default function GoToLink({ children, url }: InternalOnlyLinkProps) {
         <ChevronRight />
       </Link>
     </Button>
-  );
+  )
 }

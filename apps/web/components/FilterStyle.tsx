@@ -1,17 +1,17 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from 'react'
 
 type FilterStyleProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 export const FilterStyle = ({ children }: FilterStyleProps) => {
-  return <div className="flex flex-wrap items-start gap-2 [&_label]:w-[190px]">{children}</div>;
-};
+  return <div className="flex flex-wrap items-start gap-2 [&_label]:w-[190px]">{children}</div>
+}
 
 type FilterItemStyleProps = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
 export const FilterItemStyle = ({ children }: FilterItemStyleProps) => {
-  return <div className="flex flex-col gap-3 pt-1">{children}</div>;
-};
+  return <div className="flex flex-col gap-3 pt-1">{children}</div>
+}

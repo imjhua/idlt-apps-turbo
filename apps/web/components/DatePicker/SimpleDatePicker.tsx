@@ -1,22 +1,22 @@
-'use client';
+'use client'
 
-import { Button } from '@repo/ui/button';
-import { Calendar } from '@repo/ui/calendar';
-import { Popover, PopoverContent, PopoverTrigger } from '@repo/ui/popover';
-import { CalendarIcon } from 'lucide-react';
-import * as React from 'react';
+import { Button } from '@repo/ui/button'
+import { Calendar } from '@repo/ui/calendar'
+import { Popover, PopoverContent, PopoverTrigger } from '@repo/ui/popover'
+import { CalendarIcon } from 'lucide-react'
+import * as React from 'react'
 
-import { cn, formatDate } from '@/lib/utils';
+import { cn, formatDate } from '@/lib/utils'
 
 type SimpleDatePickerProps = {
-  date: Date | undefined;
-  onSelectDate: (date: Date | undefined) => void;
-};
+  date: Date | undefined
+  onSelectDate: (date: Date | undefined) => void
+}
 
 export function SimpleDatePicker({ date, onSelectDate }: SimpleDatePickerProps) {
   const handleDateSelect = (date: Date | undefined) => {
-    onSelectDate(date);
-  };
+    onSelectDate(date)
+  }
 
   return (
     <Popover>
@@ -36,5 +36,5 @@ export function SimpleDatePicker({ date, onSelectDate }: SimpleDatePickerProps) 
         <Calendar mode="single" selected={date} onSelect={handleDateSelect} initialFocus />
       </PopoverContent>
     </Popover>
-  );
+  )
 }

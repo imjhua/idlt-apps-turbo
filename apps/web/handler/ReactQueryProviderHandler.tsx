@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
-import { isAxiosError } from '@repo/request/http';
-import { QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { toast } from 'sonner';
+import { isAxiosError } from '@repo/request/http'
+import { QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import { toast } from 'sonner'
 
 const client = new QueryClient({
   defaultOptions: {
@@ -17,17 +17,17 @@ const client = new QueryClient({
     onError: (error) => {
       if (isAxiosError(error) && error.response) {
         if (error.response.status === 401) {
-          window.location.reload();
+          window.location.reload()
         }
 
-        const { message } = error.response.data;
-        toast.error(message);
-        return;
+        const { message } = error.response.data
+        toast.error(message)
+        return
       }
-      toast.error('알 수 없는 에러가 발생하였습니다. 다시 시도해 주세요.');
+      toast.error('알 수 없는 에러가 발생하였습니다. 다시 시도해 주세요.')
     },
   }),
-});
+})
 
 export default function ReactQueryProviderHandler({ children }: React.PropsWithChildren) {
   return (
@@ -35,5 +35,5 @@ export default function ReactQueryProviderHandler({ children }: React.PropsWithC
       {children}
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
-  );
+  )
 }

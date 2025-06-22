@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 function LoadingSpiner() {
   return (
@@ -9,7 +9,7 @@ function LoadingSpiner() {
         </span>
       </div>
     </div>
-  );
+  )
 }
 
-export default LoadingSpiner;
+export default LoadingSpiner

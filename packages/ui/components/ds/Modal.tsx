@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 import {
   Dialog,
   DialogClose,
@@ -7,25 +7,25 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '../ui/dialog';
-import { ReactNode } from 'react';
-import { ScrollArea } from '../ui/scroll-area';
+} from '../ui/dialog'
+import { ReactNode } from 'react'
+import { ScrollArea } from '../ui/scroll-area'
 
 const MODAL_SIZE_CLASS_MAP = {
   sm: 'max-w-[360px]',
   md: 'max-w-[560px]',
   lg: 'max-w-[960px]',
-};
+}
 
 type ModalProps = {
-  trigger?: ReactNode; // ModalTrigger 컴포넌트로 감싸서 전달
-  title: string;
-  desc?: string;
-  children: ReactNode;
-  onClose?: () => void;
-  size?: 'sm' | 'md' | 'lg';
-  scroll?: boolean;
-};
+  trigger?: ReactNode // ModalTrigger 컴포넌트로 감싸서 전달
+  title: string
+  desc?: string
+  children: ReactNode
+  onClose?: () => void
+  size?: 'sm' | 'md' | 'lg'
+  scroll?: boolean
+}
 
 export function Modal({
   trigger,
@@ -40,7 +40,7 @@ export function Modal({
     <Dialog
       onOpenChange={(isOpen) => {
         if (!isOpen && onClose) {
-          onClose();
+          onClose()
         }
       }}
     >
@@ -59,8 +59,8 @@ export function Modal({
         )}
       </DialogContent>
     </Dialog>
-  );
+  )
 }
 
-export const ModalTrigger = DialogTrigger;
-export const ModalClose = DialogClose;
+export const ModalTrigger = DialogTrigger
+export const ModalClose = DialogClose

@@ -1,7 +1,7 @@
-import { Button } from '@repo/ui/button';
-import Link from 'next/link';
+import { Button } from '@repo/ui/button'
+import Link from 'next/link'
 
-import Error from '@/components/Error';
+import Error from '@/components/Error'
 
 export default function NotFound() {
   return (
@@ -14,5 +14,5 @@ export default function NotFound() {
         </Button>
       }
     />
-  );
+  )
 }

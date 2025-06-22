@@ -10,8 +10,13 @@ import { GetMenuResponseType } from '@/apis/internal'
 import { AppSidebar } from '@/components/AppSidebar'
 // import { Notification } from '@/components/Notification'
 
-
-export default function LayoutHandler({ children, menuData }: { children: ReactNode; menuData: GetMenuResponseType }) {
+export default function LayoutHandler({
+  children,
+  menuData,
+}: {
+  children: ReactNode
+  menuData: GetMenuResponseType
+}) {
   const pathname = usePathname()
 
   const [txtMenu, setTxtMenu] = useState<string>()
@@ -38,10 +43,12 @@ export default function LayoutHandler({ children, menuData }: { children: ReactN
         <header className="flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear">
           <div className="flex flex-1 items-center gap-2 px-5">
             <SidebarTrigger className="-ml-1" />
-            {txtMenu && (<>
-              <Separator orientation="vertical" className="m-0 h-4" />
-              <div>{txtMenu}</div>
-            </>)}
+            {txtMenu && (
+              <>
+                <Separator orientation="vertical" className="m-0 h-4" />
+                <div>{txtMenu}</div>
+              </>
+            )}
             <div className="ml-auto flex space-x-4 items-center h-4">
               {/* FIXME: 알림관련 스펙은 미정 */}
               {/* <Notification />
@@ -50,9 +57,7 @@ export default function LayoutHandler({ children, menuData }: { children: ReactN
             </div>
           </div>
         </header>
-        <div className="py-9 px-10 h-[calc(100vh-4rem)] flex flex-col">
-          {children}
-        </div>
+        <div className="py-9 px-10 h-[calc(100vh-4rem)] flex flex-col">{children}</div>
       </SidebarInset>
     </SidebarProvider>
   )

@@ -1,4 +1,4 @@
-import { ScrollArea } from '@repo/ui/scroll-area';
+import { ScrollArea } from '@repo/ui/scroll-area'
 import {
   Table,
   TableBody,
@@ -7,22 +7,22 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@repo/ui/table';
-import { CSSProperties, ReactNode } from 'react';
+} from '@repo/ui/table'
+import { CSSProperties, ReactNode } from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import { SubTitle } from '../Title';
+import { SubTitle } from '../Title'
 
-type Title = string;
-type ClassName = string;
+type Title = string
+type ClassName = string
 type SimpleTableProps<T> = {
-  title?: string;
-  data: T[];
-  columns: [Extract<keyof T, string>, Title?, ClassName?][];
-  customHeader?: ReactNode;
-  customFooter?: ReactNode;
-};
+  title?: string
+  data: T[]
+  columns: [Extract<keyof T, string>, Title?, ClassName?][]
+  customHeader?: ReactNode
+  customFooter?: ReactNode
+}
 
 export default function SimpleTable<T>({
   title,
@@ -46,7 +46,7 @@ export default function SimpleTable<T>({
                     <TableRowHeader key={index} className={className}>
                       {name || key}
                     </TableRowHeader>
-                  );
+                  )
                 })}
               </TableRow>
             )}
@@ -59,7 +59,7 @@ export default function SimpleTable<T>({
                     <TableRowCell key={key} className={className}>
                       {rowData[key as keyof T] as ReactNode}
                     </TableRowCell>
-                  );
+                  )
                 })}
               </TableRow>
             ))}
@@ -68,28 +68,28 @@ export default function SimpleTable<T>({
         </Table>
       </TableWrapper>
     </div>
-  );
+  )
 }
 
 export type ScrollAreaProps = {
-  className?: string;
-};
+  className?: string
+}
 
 export function TableWrapper({
   children,
   scroll,
 }: {
-  children: ReactNode;
-  scroll?: ScrollAreaProps;
+  children: ReactNode
+  scroll?: ScrollAreaProps
 }) {
   if (scroll) {
     return (
       <div className="border border-tweb-neutral5 rounded-lg overflow-hidden">
         <ScrollArea className={scroll.className}>{children}</ScrollArea>
       </div>
-    );
+    )
   } else {
-    return <div className="border rounded-lg overflow-hidden">{children}</div>;
+    return <div className="border rounded-lg overflow-hidden">{children}</div>
   }
 }
 
@@ -98,15 +98,15 @@ export function TableRowHeader({
   style,
   children,
 }: {
-  className?: string;
-  style?: CSSProperties;
-  children: ReactNode;
+  className?: string
+  style?: CSSProperties
+  children: ReactNode
 }) {
   return (
     <TableHead style={style} className={cn('font-regular px-4 py-0', className)}>
       {children}
     </TableHead>
-  );
+  )
 }
 
 export function TableRowCell({
@@ -114,13 +114,13 @@ export function TableRowCell({
   style,
   children,
 }: {
-  className?: string;
-  style?: CSSProperties;
-  children: ReactNode;
+  className?: string
+  style?: CSSProperties
+  children: ReactNode
 }) {
   return (
     <TableCell style={style} className={cn('px-4 py-2', className)}>
       {children}
     </TableCell>
-  );
+  )
 }

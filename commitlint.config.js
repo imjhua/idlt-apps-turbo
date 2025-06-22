@@ -29,4 +29,4 @@ module.exports = {
     ],
     'subject-case': [0], // subject-case 체크 비활성화
   },
-};
+}

@@ -1,4 +1,4 @@
-import { normalizePathForRoute } from './utils';
+import { normalizePathForRoute } from './utils'
 
 describe('normalizePathForRoute 함수', () => {
   const testCases: [string, string][] = [
@@ -9,9 +9,9 @@ describe('normalizePathForRoute 함수', () => {
     ['/books/1234/profile/5678', '/books/[param]/profile/[param]'],
     ['/users/789a', '/users/789a'],
     ['/1234', '/[param]'],
-  ];
+  ]
 
   test.each(testCases)('경로 "%s" => "%s" 로 치환되어야 한다', (input, expected) => {
-    expect(normalizePathForRoute(input)).toBe(expected);
-  });
-});
+    expect(normalizePathForRoute(input)).toBe(expected)
+  })
+})

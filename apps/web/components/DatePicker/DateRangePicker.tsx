@@ -1,23 +1,23 @@
-'use client';
+'use client'
 
-import { Button } from '@repo/ui/button';
-import { Calendar } from '@repo/ui/calendar';
-import { Popover, PopoverContent, PopoverTrigger } from '@repo/ui/popover';
-import { CalendarIcon } from 'lucide-react';
-import * as React from 'react';
-import { DateRange } from 'react-day-picker';
+import { Button } from '@repo/ui/button'
+import { Calendar } from '@repo/ui/calendar'
+import { Popover, PopoverContent, PopoverTrigger } from '@repo/ui/popover'
+import { CalendarIcon } from 'lucide-react'
+import * as React from 'react'
+import { DateRange } from 'react-day-picker'
 
-import { cn, formatDate } from '@/lib/utils';
+import { cn, formatDate } from '@/lib/utils'
 
 type DatePickerWithRangeProps = {
-  date: DateRange | undefined;
-  onSelectDate: (range: DateRange | undefined) => void;
-};
+  date: DateRange | undefined
+  onSelectDate: (range: DateRange | undefined) => void
+}
 
 export function DatePickerWithRange({ date, onSelectDate }: DatePickerWithRangeProps) {
   const handleDateSelect = (date: DateRange | undefined) => {
-    onSelectDate(date);
-  };
+    onSelectDate(date)
+  }
 
   return (
     <div className="grid gap-2">
@@ -62,5 +62,5 @@ export function DatePickerWithRange({ date, onSelectDate }: DatePickerWithRangeP
         </PopoverContent>
       </Popover>
     </div>
-  );
+  )
 }

@@ -8,11 +8,11 @@
 # 4. 경로는 `route.yaml` 파일을 참고하세요.
 
 menus:
-  - name: "대시보드"
-    icon: "layout-dashboard"
+  - name: '대시보드'
+    icon: 'layout-dashboard'
     sub_menus:
-      - name: "대시보드"
-        path: "/dashboard"
+      - name: '대시보드'
+        path: '/dashboard'
 
   - name: '관리'
     icon: 'server'

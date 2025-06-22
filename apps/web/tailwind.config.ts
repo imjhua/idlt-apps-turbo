@@ -1,4 +1,4 @@
-import config from '@repo/ui/tailwind.config';
+import config from '@repo/ui/tailwind.config'
 
 const tailwindConfig = {
   ...config,
@@ -10,6 +10,6 @@ const tailwindConfig = {
     '../../packages/ui/components/**/*.{ts,tsx}',
   ],
   safelist: [],
-};
+}
 
-export default tailwindConfig;
+export default tailwindConfig

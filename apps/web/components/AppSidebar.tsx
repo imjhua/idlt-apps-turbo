@@ -1,4 +1,4 @@
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@repo/ui/collapsible';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@repo/ui/collapsible'
 import {
   Sidebar,
   SidebarContent,
@@ -9,23 +9,23 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from '@repo/ui/sidebar';
-import { ChevronRight } from 'lucide-react';
-import { DynamicIcon } from 'lucide-react/dynamic';
-import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+} from '@repo/ui/sidebar'
+import { ChevronRight } from 'lucide-react'
+import { DynamicIcon } from 'lucide-react/dynamic'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
-import { normalizePathForRoute, PATHNAME_TO_MENU_ROUTE } from '@/lib/utils';
-import { cn } from '@/lib/utils';
-import { MenuItemType } from '@/types/menu';
+import { normalizePathForRoute, PATHNAME_TO_MENU_ROUTE } from '@/lib/utils'
+import { cn } from '@/lib/utils'
+import { MenuItemType } from '@/types/menu'
 interface SidebarProps extends React.ComponentProps<typeof Sidebar> {
-  menus: MenuItemType[];
-  sidebarOpen?: boolean;
+  menus: MenuItemType[]
+  sidebarOpen?: boolean
 }
 
 export function AppSidebar({ menus, sidebarOpen, ...props }: SidebarProps) {
-  const pathname = usePathname();
+  const pathname = usePathname()
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
@@ -48,8 +48,8 @@ export function AppSidebar({ menus, sidebarOpen, ...props }: SidebarProps) {
         <SidebarMenu className="gap-0">
           {menus.map(({ name, icon, sub_menus }, index) => {
             if (sub_menus.length === 1 && sub_menus[0]) {
-              const { name, path } = sub_menus[0];
-              const pathnameForSubpath = PATHNAME_TO_MENU_ROUTE[normalizePathForRoute(pathname)];
+              const { name, path } = sub_menus[0]
+              const pathnameForSubpath = PATHNAME_TO_MENU_ROUTE[normalizePathForRoute(pathname)]
 
               return (
                 <SidebarMenuItem key={index}>
@@ -63,7 +63,7 @@ export function AppSidebar({ menus, sidebarOpen, ...props }: SidebarProps) {
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
-              );
+              )
             }
 
             return (
@@ -93,8 +93,8 @@ export function AppSidebar({ menus, sidebarOpen, ...props }: SidebarProps) {
                         <SidebarMenuSub>
                           {sub_menus.map(({ name: subName, path }) => {
                             const pathnameForSubpath =
-                              PATHNAME_TO_MENU_ROUTE[normalizePathForRoute(pathname)];
-                            const isSelected = pathname === path || pathnameForSubpath === path;
+                              PATHNAME_TO_MENU_ROUTE[normalizePathForRoute(pathname)]
+                            const isSelected = pathname === path || pathnameForSubpath === path
 
                             return (
                               <SidebarMenuSubItem key={subName}>
@@ -110,7 +110,7 @@ export function AppSidebar({ menus, sidebarOpen, ...props }: SidebarProps) {
                                   </Link>
                                 </SidebarMenuSubButton>
                               </SidebarMenuSubItem>
-                            );
+                            )
                           })}
                         </SidebarMenuSub>
                       </CollapsibleContent>
@@ -118,10 +118,10 @@ export function AppSidebar({ menus, sidebarOpen, ...props }: SidebarProps) {
                   )}
                 </SidebarMenuItem>
               </Collapsible>
-            );
+            )
           })}
         </SidebarMenu>
       </SidebarContent>
     </Sidebar>
-  );
+  )
 }

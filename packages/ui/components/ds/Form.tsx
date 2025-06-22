@@ -1,9 +1,9 @@
-import { FormEventHandler, ReactNode, useState, createContext, useContext } from 'react';
-import { Control, ControllerRenderProps, FieldValues, Path } from 'react-hook-form';
+import { FormEventHandler, ReactNode, useState, createContext, useContext } from 'react'
+import { Control, ControllerRenderProps, FieldValues, Path } from 'react-hook-form'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import { Button } from '../ui/button';
+import { Button } from '../ui/button'
 import {
   FormControl,
   FormDescription,
@@ -11,24 +11,24 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../ui/form';
-import { Input } from '../ui/input';
+} from '../ui/form'
+import { Input } from '../ui/input'
 
 // Field 옵션 context 생성
 const FieldOptionContext = createContext<{
-  orientation: 'horizontal' | 'vertical';
-  insideModal: boolean;
-}>({ orientation: 'horizontal', insideModal: false });
+  orientation: 'horizontal' | 'vertical'
+  insideModal: boolean
+}>({ orientation: 'horizontal', insideModal: false })
 
 // FormSubmit에서 context로 옵션 제공
 
 type FormSubmitProps = {
-  onSubmit: FormEventHandler<HTMLFormElement>;
-  children: ReactNode;
-  className?: string;
-  orientation?: 'horizontal' | 'vertical';
-  insideModal?: boolean;
-};
+  onSubmit: FormEventHandler<HTMLFormElement>
+  children: ReactNode
+  className?: string
+  orientation?: 'horizontal' | 'vertical'
+  insideModal?: boolean
+}
 
 export function FormSubmit({
   onSubmit,
@@ -43,28 +43,28 @@ export function FormSubmit({
         {children}
       </form>
     </FieldOptionContext.Provider>
-  );
+  )
 }
 
 type FieldProps<T extends FieldValues> = {
-  showLabel?: boolean;
-  control: Control<T>;
-  label?: string;
-  name: Path<T>;
-  desc?: string;
-  orientation?: 'horizontal' | 'vertical';
+  showLabel?: boolean
+  control: Control<T>
+  label?: string
+  name: Path<T>
+  desc?: string
+  orientation?: 'horizontal' | 'vertical'
   /* @deprecated: insideModal props 제거 */
-  insideModal?: boolean;
-  required?: boolean;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  insideModal?: boolean
+  required?: boolean
   render: ({
     field,
     required,
   }: {
-    field: ControllerRenderProps<T, any>;
-    required: boolean;
-  }) => React.ReactElement;
-};
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    field: ControllerRenderProps<T, any>
+    required: boolean
+  }) => React.ReactElement
+}
 
 export function Field<T extends FieldValues>({
   showLabel = true,
@@ -78,9 +78,9 @@ export function Field<T extends FieldValues>({
   render,
 }: FieldProps<T>) {
   // context에서 옵션 가져오기
-  const ctx = useContext(FieldOptionContext);
-  const _orientation = orientation ?? ctx.orientation;
-  const _insideModal = insideModal ?? ctx.insideModal;
+  const ctx = useContext(FieldOptionContext)
+  const _orientation = orientation ?? ctx.orientation
+  const _insideModal = insideModal ?? ctx.insideModal
 
   return (
     <FormField
@@ -130,20 +130,20 @@ export function Field<T extends FieldValues>({
               </FormDescription>
             )}
           </FormItem>
-        );
+        )
       }}
     />
-  );
+  )
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type FileUploadProps = {
-  field: ControllerRenderProps<any, Path<any>>;
-  button?: ReactNode;
-  isPreview?: boolean;
-};
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  field: ControllerRenderProps<any, Path<any>>
+  button?: ReactNode
+  isPreview?: boolean
+}
 export function FileUpload({ field, button = '업로드', isPreview }: FileUploadProps) {
-  const [previewUrl, setPreviewUrl] = useState<string | null>(field.value);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(field.value)
   return (
     <div>
       {button || (
@@ -158,19 +158,19 @@ export function FileUpload({ field, button = '업로드', isPreview }: FileUploa
         {...field}
         value={undefined}
         onChange={(event) => {
-          const selectedFile = event.target.files?.[0];
+          const selectedFile = event.target.files?.[0]
           if (!selectedFile) {
-            return;
+            return
           }
 
           // 이미지 파일이면 미리보기 URL 생성
           if (selectedFile.type.startsWith('image/')) {
-            setPreviewUrl(URL.createObjectURL(selectedFile));
+            setPreviewUrl(URL.createObjectURL(selectedFile))
           } else {
-            setPreviewUrl('');
+            setPreviewUrl('')
           }
 
-          field.onChange(selectedFile ?? null);
+          field.onChange(selectedFile ?? null)
         }}
       />
       {isPreview && previewUrl && (
@@ -186,9 +186,9 @@ export function FileUpload({ field, button = '업로드', isPreview }: FileUploa
         </>
       )}
     </div>
-  );
+  )
 }
 
 export function ButtonWrapper({ children }: { children: ReactNode }) {
-  return <div className="text-right space-x-5 pt-6">{children}</div>;
+  return <div className="text-right space-x-5 pt-6">{children}</div>
 }

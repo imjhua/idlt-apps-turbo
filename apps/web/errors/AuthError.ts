@@ -1,9 +1,9 @@
-import { HTTP_STATUS, HTTP_STATUS_MESSAGES } from '@repo/request/httpStatusCodes';
+import { HTTP_STATUS, HTTP_STATUS_MESSAGES } from '@repo/request/httpStatusCodes'
 
-import { AppError, DetailType } from './AppError';
+import { AppError, DetailType } from './AppError'
 
 export class AuthError extends AppError {
   constructor(message = HTTP_STATUS_MESSAGES[HTTP_STATUS.UNAUTHORIZED], details: DetailType) {
-    super(message, HTTP_STATUS.UNAUTHORIZED, details);
+    super(message, HTTP_STATUS.UNAUTHORIZED, details)
   }
 }

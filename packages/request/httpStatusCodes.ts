@@ -64,7 +64,7 @@ export const HTTP_STATUS = {
   HTTP_VERSION_NOT_SUPPORTED: 505,
   INSUFFICIENT_STORAGE: 507,
   NETWORK_AUTHENTICATION_REQUIRED: 511,
-} as const;
+} as const
 
 export const HTTP_STATUS_MESSAGES = {
   // Informational Response 1xx
@@ -128,4 +128,4 @@ export const HTTP_STATUS_MESSAGES = {
   [HTTP_STATUS.HTTP_VERSION_NOT_SUPPORTED]: 'HTTP Version Not Supported',
   [HTTP_STATUS.INSUFFICIENT_STORAGE]: 'Insufficient Storage',
   [HTTP_STATUS.NETWORK_AUTHENTICATION_REQUIRED]: 'Network Authentication Required',
-};
+}

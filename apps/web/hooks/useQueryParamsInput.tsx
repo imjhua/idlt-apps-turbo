@@ -1,34 +1,34 @@
-import { Input } from '@repo/ui/input';
-import { Label } from '@repo/ui/label';
-import { useQueryState } from 'nuqs';
-import { useEffect, useState } from 'react';
+import { Input } from '@repo/ui/input'
+import { Label } from '@repo/ui/label'
+import { useQueryState } from 'nuqs'
+import { useEffect, useState } from 'react'
 
-import { FilterItemStyle } from '@/components/FilterStyle';
-import { cn } from '@/lib/utils';
+import { FilterItemStyle } from '@/components/FilterStyle'
+import { cn } from '@/lib/utils'
 
 export default function useQueryParamsInput({
   key,
   label,
   placeholder,
 }: {
-  key: string;
-  label?: string;
-  placeholder?: string;
+  key: string
+  label?: string
+  placeholder?: string
 }): [string, (className?: string) => JSX.Element] {
-  const [query, setQuery] = useQueryState(key, { defaultValue: '' });
-  const [value, setValue] = useState<string>(query);
+  const [query, setQuery] = useQueryState(key, { defaultValue: '' })
+  const [value, setValue] = useState<string>(query)
 
   useEffect(() => {
-    setValue(query);
-  }, [query]);
+    setValue(query)
+  }, [query])
 
   useEffect(() => {
-    setQuery(value.trim());
-  }, [value, setQuery]);
+    setQuery(value.trim())
+  }, [value, setQuery])
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-  };
+    setValue(event.target.value)
+  }
 
   const renderQueryParamsInput = (className?: string) => (
     <FilterItemStyle>
@@ -49,7 +49,7 @@ export default function useQueryParamsInput({
         </>
       )}
     </FilterItemStyle>
-  );
+  )
 
-  return [query, renderQueryParamsInput];
+  return [query, renderQueryParamsInput]
 }

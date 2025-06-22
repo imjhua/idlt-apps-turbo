@@ -1,14 +1,14 @@
-import { Methods, request } from './request';
+import { Methods, request } from './request'
 
 export type GetRequestType<T> = {
-  method: Methods;
-  url: string;
-  params?: T;
-  data?: T;
-  internal?: boolean;
-};
+  method: Methods
+  url: string
+  params?: T
+  data?: T
+  internal?: boolean
+}
 
-export type GetResponseType<T> = T;
+export type GetResponseType<T> = T
 
 export const fetchData = async <RequestType, ResponseType>({
   method,
@@ -23,5 +23,5 @@ export const fetchData = async <RequestType, ResponseType>({
     url,
     params,
     data,
-  });
-};
+  })
+}

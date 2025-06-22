@@ -1,6 +1,6 @@
-import { Button } from '@repo/ui/button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@repo/ui/dropdown-menu';
-import { Inbox } from 'lucide-react';
+import { Button } from '@repo/ui/button'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '@repo/ui/dropdown-menu'
+import { Inbox } from 'lucide-react'
 
 const items = [
   {
@@ -19,7 +19,7 @@ const items = [
     date: new Date().toLocaleString(),
     content: '알림',
   },
-];
+]
 export function Notification() {
   return (
     <DropdownMenu>
@@ -63,10 +63,10 @@ export function Notification() {
                   </div>
                 </div>
               </button>
-            );
+            )
           })}
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

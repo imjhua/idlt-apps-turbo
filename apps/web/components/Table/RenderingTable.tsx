@@ -1,26 +1,26 @@
-import { Table, TableBody, TableHeader, TableRow } from '@repo/ui/table';
-import { CSSProperties, ReactNode } from 'react';
+import { Table, TableBody, TableHeader, TableRow } from '@repo/ui/table'
+import { CSSProperties, ReactNode } from 'react'
 
-import { SubTitle } from '../Title';
-import { TableRowCell, TableRowHeader, TableWrapper } from './SimpleTable';
+import { SubTitle } from '../Title'
+import { TableRowCell, TableRowHeader, TableWrapper } from './SimpleTable'
 
 export type RenderingColumn<T> = {
-  header: ReactNode;
-  style?: CSSProperties;
-  cell: (props: { row: T; rowIndex: number }) => ReactNode;
-};
+  header: ReactNode
+  style?: CSSProperties
+  cell: (props: { row: T; rowIndex: number }) => ReactNode
+}
 
 export type ScrollAreaProps = {
-  className?: string;
-};
+  className?: string
+}
 
 type RenderingTableProps<T> = {
-  className?: string;
-  title?: string;
-  data: T[];
-  columns: RenderingColumn<T>[];
-  scroll?: ScrollAreaProps;
-};
+  className?: string
+  title?: string
+  data: T[]
+  columns: RenderingColumn<T>[]
+  scroll?: ScrollAreaProps
+}
 
 export default function RenderingTable<T>({
   className,
@@ -41,7 +41,7 @@ export default function RenderingTable<T>({
                   <TableRowHeader key={index} style={col.style}>
                     {col.header}
                   </TableRowHeader>
-                );
+                )
               })}
             </TableRow>
           </TableHeader>
@@ -64,5 +64,5 @@ export default function RenderingTable<T>({
         </Table>
       </TableWrapper>
     </div>
-  );
+  )
 }
