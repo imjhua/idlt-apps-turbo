@@ -8,6 +8,11 @@ import Error from '@/components/Error'
 import { isAppError } from '@/errors'
 import { isAxiosError } from '@/lib/request'
 
+import { WebConfigType } from '@/types/web'
+import webConfig from '@/config/web.yaml'
+
+const { profile } = (webConfig as WebConfigType)
+
 export default function GlobalError({
   error,
 }: {
@@ -44,7 +49,7 @@ export default function GlobalError({
       <body className="overflow-y-hidden">
         <header className="flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div className="flex flex-1 items-center gap-2 px-3">
-            <div className="ml-auto px-3">유저 프로필 영역</div>
+            <div className="ml-auto px-3">{profile.email}</div>
           </div>
         </header>
         <div className="flex justify-center items-center flex-col h-[calc(100vh-64px)]">

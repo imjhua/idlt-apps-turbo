@@ -10,6 +10,12 @@ import { GetMenuResponseType } from '@/apis/internal'
 import { AppSidebar } from '@/components/AppSidebar'
 // import { Notification } from '@/components/Notification'
 
+import { WebConfigType } from '@/types/web'
+import webConfig from '@/config/web.yaml'
+
+const { profile } = (webConfig as WebConfigType)
+
+
 export default function LayoutHandler({
   children,
   menuData,
@@ -53,7 +59,7 @@ export default function LayoutHandler({
               {/* FIXME: 알림관련 스펙은 미정 */}
               {/* <Notification />
               <Separator orientation="vertical" className="m-0" /> */}
-              프로필 영역
+              {profile.email}
             </div>
           </div>
         </header>

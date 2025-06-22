@@ -1,16 +1,8 @@
 env:
   local:
     environmentName: '로컬'
-
-  alpha:
-    environmentName: '알파'
-
   prod:
     environmentName: '운영'
 
-adminType:
-  internal:
-    siteName: '내부 어드민'
-
-  external:
-    siteName: '파트너사 어드민'
+profile:
+  email: idltapps@gmail.com
