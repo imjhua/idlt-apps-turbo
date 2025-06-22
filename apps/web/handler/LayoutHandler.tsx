@@ -5,13 +5,12 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from '@repo/ui/sidebar'
 import { usePathname } from 'next/navigation'
 import { ReactNode, useEffect, useState } from 'react'
 
-import { normalizePathForRoute } from '@/lib/utils'
 import { GetMenuResponseType } from '@/apis/internal'
 import { AppSidebar } from '@/components/AppSidebar'
-// import { Notification } from '@/components/Notification'
-
-import { WebConfigType } from '@/types/web'
 import webConfig from '@/config/web.yaml'
+import { normalizePathForRoute } from '@/lib/utils'
+// import { Notification } from '@/components/Notification'
+import { WebConfigType } from '@/types/web'
 
 const { profile } = (webConfig as WebConfigType)
 

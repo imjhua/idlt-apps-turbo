@@ -1,8 +1,10 @@
 import { HTTP_STATUS, HTTP_STATUS_MESSAGES } from '@repo/request/httpStatusCodes'
 import { IconName } from 'lucide-react/dynamic'
 import { NextResponse } from 'next/server'
+
 import { AppError } from '@/errors'
 import { MenusConfigType } from '@/types/menu'
+
 import menusConfig from './menus.yaml'
 
 type SuccessResponse = {
@@ -22,7 +24,7 @@ type FailResponse = {
 
 type ResponseData = SuccessResponse | FailResponse
 
-export async function GET(request: Request): Promise<NextResponse<ResponseData>> {
+export async function GET(): Promise<NextResponse<ResponseData>> {
   try {
     const menus = (menusConfig as MenusConfigType).menus
     return NextResponse.json({ menus })
@@ -41,5 +43,3 @@ export async function GET(request: Request): Promise<NextResponse<ResponseData>>
     )
   }
 }
-
-const excludedAuthPaths = ['/', '/profile']

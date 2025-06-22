@@ -7,11 +7,9 @@ import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { ReactNode, Suspense } from 'react'
 import { Toaster } from 'sonner'
 
-import webConfig from '@/config/web.yaml'
+import { getMenu } from '@/apis/internal'
 import LayoutHandler from '@/handler/LayoutHandler'
 import ReactQueryProviderHandler from '@/handler/ReactQueryProviderHandler'
-import { WebConfigType } from '@/types/web'
-import { getMenu } from '@/apis/internal'
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',

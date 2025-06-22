@@ -1,4 +1,4 @@
-import { HTTP_STATUS, HTTP_STATUS_MESSAGES } from '@repo/request/httpStatusCodes'
+import { HTTP_STATUS_MESSAGES } from '@repo/request/httpStatusCodes'
 import { ReactNode } from 'react'
 
 type ErrorProps = {

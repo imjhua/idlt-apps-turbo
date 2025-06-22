@@ -1,15 +1,13 @@
 'use client'
 
-import { HTTP_STATUS } from '@repo/request/httpStatusCodes'
 import { Button } from '@repo/ui/button'
 import Link from 'next/link'
 
 import Error from '@/components/Error'
+import webConfig from '@/config/web.yaml'
 import { isAppError } from '@/errors'
 import { isAxiosError } from '@/lib/request'
-
 import { WebConfigType } from '@/types/web'
-import webConfig from '@/config/web.yaml'
 
 const { profile } = (webConfig as WebConfigType)
 
@@ -21,11 +19,6 @@ export default function GlobalError({
 }) {
   let stausCode = 500
   let errorMessage = error.message || '서비스 제공 중 문제가 발생했습니다. 홈으로 이동해 주세요.'
-  let user = {
-    email: '',
-    role: '',
-    partnerName: '',
-  }
 
   if (isAxiosError(error) && error.response) {
     const { message } = error.response.data
@@ -36,11 +29,6 @@ export default function GlobalError({
       const {
         details: { email, partnerName, role },
       } = error.response.data
-      user = {
-        email,
-        role,
-        partnerName,
-      }
     }
   }
 
