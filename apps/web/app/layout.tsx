@@ -63,3 +63,23 @@ export default async function RootLayout({
     </html>
   )
 }
+
+
+
+// type AppBlockProps = {
+//   children: React.ReactNode;
+//   background?: string;
+// };
+
+// const AppBlock: React.FC<AppBlockProps> = ({ children, background = "#fff" }) => {
+//   const style: React.CSSProperties = {
+//     paddingTop: "env(safe-area-inset-top)",
+//     paddingRight: "env(safe-area-inset-right)",
+//     paddingBottom: "env(safe-area-inset-bottom)",
+//     paddingLeft: "env(safe-area-inset-left)",
+//     backgroundColor: background,
+//     minHeight: "calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom))",
+//   };
+
+//   return <div style={style}>{children}</div>;
+// };
