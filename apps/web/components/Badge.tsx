@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 
-import { cn } from '@/lib/utils'
 import colorConfig from '@/config/color.yaml'
+import { cn } from '@/lib/utils'
 import type { ColorConfigType } from '@/types/color'
 
 type BadgeProps = {

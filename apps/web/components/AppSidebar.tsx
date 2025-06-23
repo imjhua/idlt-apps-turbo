@@ -30,7 +30,7 @@ interface SidebarProps extends React.ComponentProps<typeof Sidebar> {
 
 export function AppSidebar({ menus, ...props }: SidebarProps) {
   const pathname = usePathname()
-  const { isMobile, setOpen, setOpenMobile } = useSidebar()
+  const { isMobile, setOpenMobile } = useSidebar()
 
   const handleMenuClick = () => {
     if (isMobile) {

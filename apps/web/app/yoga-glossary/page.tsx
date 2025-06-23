@@ -1,19 +1,21 @@
 "use client";
 
+import { Accordion, AccordionContent,AccordionItem, AccordionTrigger } from "@repo/ui/accordion";
 import Link from "next/link";
 import { useState } from "react";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@repo/ui/accordion";
+
+import webConfig from '@/config/web.yaml'
+import { WebConfigType } from '@/types/web'
+
 import { Badge } from "../../components/Badge";
 import animal from "../../data/terms/animal.json";
 import asanaFlow from "../../data/terms/asana-flow.json";
 import bandha from "../../data/terms/bandha.json";
 import basic from "../../data/terms/basic.json";
-import chakra from "../../data/terms/chakra.json";
-import number from "../../data/terms/number.json";
 import body from "../../data/terms/body.json";
+import chakra from "../../data/terms/chakra.json";
 import etc from "../../data/terms/etc.json";
-import webConfig from '@/config/web.yaml'
-import { WebConfigType } from '@/types/web'
+import number from "../../data/terms/number.json";
 
 
 const { brand } = (webConfig as WebConfigType)

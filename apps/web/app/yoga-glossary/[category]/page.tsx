@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+
 import { GlossaryCard } from '../../../components/GlossaryCard';
 
 interface Term {
@@ -17,8 +18,11 @@ const CATEGORY_META: Record<string, { badge: string; title: string }> = {
   'number-body-etc': { badge: '기타', title: '숫자, 신체 부위 그리고 일반 용어' },
 };
 
-export default async function GlossaryCategoryPage({ params }: { params: { category: string } }) {
-  const { category } = params;
+
+type PageParams = Promise<{ category: string }>;
+
+export default async function Page({ params }: {params : PageParams}) {
+  const { category } = await params;
   const meta = CATEGORY_META[category];
   if (!meta) return notFound();
 

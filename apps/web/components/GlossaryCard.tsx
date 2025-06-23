@@ -1,5 +1,6 @@
+import { Card, CardContent,CardHeader, CardTitle } from "@repo/ui/card";
 import { ReactNode } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@repo/ui/card";
+
 import { Badge } from "./Badge";
 
 interface GlossaryCardProps {

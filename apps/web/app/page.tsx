@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+
 import webConfig from '@/config/web.yaml'
 import { WebConfigType } from '@/types/web'
 
@@ -16,7 +17,7 @@ export default function Home() {
           다양한 용어를 쉽고 빠르게!
         </div>
         <Link
-          href="/glossary"
+          href="/yoga-glossary"
           className="px-6 py-3 rounded-full bg-primary text-primary-foreground font-bold text-lg shadow hover:bg-primary/90 transition"
         >
           요가 용어집 바로가기
