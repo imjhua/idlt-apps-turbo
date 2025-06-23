@@ -2,15 +2,13 @@
 
 import { SidebarInset, SidebarProvider, SidebarTrigger } from '@repo/ui/sidebar'
 import { Moon, Sun } from 'lucide-react'
-import { usePathname } from 'next/navigation'
-import { ReactNode, useEffect } from 'react'
+import { ReactNode } from 'react'
 
 import { GetMenuResponseType } from '@/apis/internal'
-import { useTheme } from '@/app/ThemeProvider'
 import { AppSidebar } from '@/components/AppSidebar'
 import Logo from '@/components/Logo'
 import webConfig from '@/config/web.yaml'
-import { normalizePathForRoute } from '@/lib/utils'
+import { useTheme } from '@/handler/ThemeProvider'
 import { WebConfigType } from '@/types/web'
 
 const { email } = (webConfig as WebConfigType)
@@ -22,22 +20,8 @@ export default function LayoutHandler({
   children: ReactNode
   menuData: GetMenuResponseType
 }) {
-  const pathname = usePathname()
-
   const { theme, toggle } = useTheme();
 
-  useEffect(() => {
-    (() => {
-      const pathnameForSubpath = normalizePathForRoute(pathname)
-      for (const item of menuData.menus) {
-        for (const sub of item.sub_menus) {
-          if (sub.path === pathname || sub.path === pathnameForSubpath) {
-            return sub.name
-          }
-        }
-      }
-    })()
-  }, [menuData, pathname])
 
   return (
     <SidebarProvider defaultOpen={false}>

@@ -11,7 +11,7 @@ import { getMenu } from '@/apis/internal'
 import LayoutHandler from '@/handler/LayoutHandler'
 import ReactQueryProviderHandler from '@/handler/ReactQueryProviderHandler'
 
-import ThemeProvider from './ThemeProvider'
+import ThemeProvider from '../handler/ThemeProvider'
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
