@@ -4,5 +4,8 @@ env:
   prod:
     environmentName: '운영'
 
-brand: IDLT Apps
+brand: 
+  name: IDLT Apps
+  desc: Welcome to IDLT Apps!
+
 email: idltapps@gmail.com

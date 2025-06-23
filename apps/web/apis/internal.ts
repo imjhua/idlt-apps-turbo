@@ -8,9 +8,9 @@ export type GetMenuRequestType = undefined
 
 export type GetMenuResponseType = { menus: MenuItemType[] }
 
-export const getMenu = async () => {
+export const getMenu = async (baseURL?: string) => {
   return await request<GetMenuResponseType>({
-    baseURL: BASE_URL,
+    baseURL: baseURL ?? BASE_URL,
     url: '/api/menus',
     method: Methods.GET,
   })

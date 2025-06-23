@@ -35,7 +35,7 @@ function BrandLogo({ isMobile }: { isMobile: boolean }) {
         <Logo width={32} height={32} />
       </div>
       <div className="flex flex-col gap-0.5 leading-none">
-        <span className="font-bold">{brand}</span>
+        <span className="font-bold">{brand.name}</span>
       </div>
     </div>
   ) : (
@@ -47,7 +47,7 @@ function BrandLogo({ isMobile }: { isMobile: boolean }) {
               <Logo width={32} height={32} />
             </div>
             <div className="flex flex-col gap-0.5 leading-none">
-              <span className="font-bold">{brand}</span>
+              <span className="font-bold">{brand.name}</span>
             </div>
           </Link>
         </SidebarMenuButton>
@@ -68,7 +68,7 @@ function SidebarMenuList({
   return (
     <SidebarMenu className="gap-0">
       {/* menus 가 왜 없을 수 있는건지? 에러가 발생함.. */}
-      {menus?.map(({ name, icon, path, sub_menus }, index) => (
+      {menus.map(({ name, icon, path, sub_menus }, index) => (
         <SidebarMenuItem key={index}>
           <SidebarMenuButton
             asChild

@@ -22,15 +22,14 @@ export default function LayoutHandler({
 }) {
   const { theme, toggle } = useTheme();
 
-
   return (
     <SidebarProvider defaultOpen={false}>
       <AppSidebar menus={menuData.menus} />
       <SidebarInset>
         <header className="flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear sticky top-0 z-50 bg-background">
           <div className="flex flex-1 items-center px-5">
-            <SidebarTrigger className="[&_svg]:size-8 [&_svg]:size-8">
-              <Logo width={48} height={48} />
+            <SidebarTrigger className="h-8 w-8 [&_svg]:size-12">
+              <Logo width={62} height={62} />
             </SidebarTrigger>
             <div className="ml-auto flex items-center h-4">
               <span className="rounded-full text-sm font-medium">{email}</span>

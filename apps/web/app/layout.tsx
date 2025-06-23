@@ -6,12 +6,18 @@ import localFont from 'next/font/local'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { ReactNode, Suspense } from 'react'
 import { Toaster } from 'sonner'
+import { headers as nextHeaders } from 'next/headers'
 
 import { getMenu } from '@/apis/internal'
+import webConfig from '@/config/web.yaml'
 import LayoutHandler from '@/handler/LayoutHandler'
 import ReactQueryProviderHandler from '@/handler/ReactQueryProviderHandler'
+import { WebConfigType } from '@/types/web'
 
 import ThemeProvider from '../handler/ThemeProvider'
+
+
+const { brand } = (webConfig as WebConfigType)
 
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
@@ -23,9 +29,9 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'IDLT APPs',
-  description: 'IDLT APPs',
-  icons: { icon: '/img_32_favicon.ico' },
+  title: brand.name,
+  description:  brand.desc,
+  icons: { icon: '/favicon.ico' },
 }
 
 export default async function RootLayout({
@@ -33,7 +39,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: ReactNode
 }>) {
-  const menuData = await getMenu()
+  const headers = await nextHeaders();
+  let baseURL: string | undefined = undefined;
+  const protocol = headers.get('x-forwarded-proto') || 'http';
+  const host = headers.get('host');
+  if (host) baseURL = `${protocol}://${host}`;
+  const menuData = await getMenu(baseURL);
+  
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>

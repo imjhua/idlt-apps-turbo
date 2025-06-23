@@ -5,6 +5,9 @@ export type AdminSiteNameType = string
 
 export type WebConfigType = {
   env: { [env in EnvironmentType]: { environmentName: string } }
-  brand: string
+  brand: {
+    name: string
+    desc: string
+  }
   email: string
 }

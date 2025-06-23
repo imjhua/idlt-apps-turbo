@@ -138,7 +138,7 @@ export default function Page() {
         )}
       </div>
       <footer className="w-full mt-10 text-center text-xs text-muted-foreground border-t pt-6 pb-6">
-        <Link href="/" className="underline">홈으로</Link> | &copy; 2025 {brand}
+        <Link href="/" className="underline">홈으로</Link> | &copy; 2025 {brand.name}
       </footer>
     </main>
   );

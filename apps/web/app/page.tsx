@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen items-center justify-center bg-background text-foreground px-4">
       <div className="w-full max-w-md flex flex-col items-center gap-8 py-16">
-        <div className="text-4xl font-extrabold tracking-tight text-primary mb-2">🧘‍♀️ {brand}</div>
+        <div className="text-4xl font-extrabold tracking-tight text-primary mb-2">🧘‍♀️ {brand.name}</div>
         <div className="text-lg text-muted-foreground text-center mb-4">
           요가와 명상, 아사나, 신체, 철학 등<br />
           다양한 용어를 쉽고 빠르게!
@@ -28,7 +28,7 @@ export default function Home() {
           <li>• 모바일/PC 반응형</li>
         </ul>
         <footer className="w-full text-center text-xs text-muted-foreground border-t pt-6 mt-10">
-          &copy; 2025 {brand}
+          &copy; 2025 {brand.name}
         </footer>
       </div>
     </main>
