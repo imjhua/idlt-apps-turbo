@@ -10,6 +10,7 @@ import { AppSidebar } from '@/components/AppSidebar'
 import webConfig from '@/config/web.yaml'
 import { normalizePathForRoute } from '@/lib/utils'
 import { WebConfigType } from '@/types/web'
+import Logo from '@/components/Logo'
 
 const { email } = (webConfig as WebConfigType)
 
@@ -43,7 +44,9 @@ export default function LayoutHandler({
       <SidebarInset>
         <header className="flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear sticky top-0 z-50 bg-background">
           <div className="flex flex-1 items-center px-5">
-            <SidebarTrigger className="-ml-1" />
+            <SidebarTrigger className="[&_svg]:size-8 [&_svg]:size-8">
+              <Logo width={48} height={48} />
+            </SidebarTrigger>
             <div className="ml-auto flex items-center h-4">
               <span className="rounded-full text-sm font-medium">{email}</span>
               <span className="border-l h-6 mx-3" />
@@ -57,7 +60,7 @@ export default function LayoutHandler({
             </div>
           </div>
         </header>
-        <div className="py-3 px-3 h-[calc(100vh-4rem)] flex flex-col">{children}</div>
+        <div className="py-6 px-6 h-[calc(100vh-4rem)] flex flex-col">{children}</div>
       </SidebarInset>
     </SidebarProvider>
   )

@@ -12,15 +12,15 @@ interface GlossaryCardProps {
 
 export function GlossaryCard({ name, desc, badge, extra, children }: GlossaryCardProps) {
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <span>{name}</span>
-          {badge && <Badge category={badge} className="text-sm">{badge}</Badge>}
+    <Card className="w-full max-w-full bg-card border border-border">
+      <CardHeader className="w-full max-w-full px-4 py-4">
+        <CardTitle className="flex items-center gap-2 text-lg text-foreground">
+          <span className="truncate">{name}</span>
+          {badge && <Badge category={badge} className="text-sm ml-2">{badge}</Badge>}
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        <div className="text-sm whitespace-pre-line">{desc}</div>
+      <CardContent className="w-full max-w-full px-4 pb-4 pt-0">
+        <div className="text-sm text-foreground whitespace-pre-line">{desc}</div>
         {extra && (
           <div className="mt-2 text-xs text-muted-foreground whitespace-pre-line">{extra}</div>
         )}

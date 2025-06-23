@@ -8,9 +8,9 @@
 # 4. 경로는 `route.yaml` 파일을 참고하세요.
 
 menus:
-  - name: '요가 용어집'
+  - name: '친절한 요가용어 안내서'
     icon: 'book-text'
-    path: '/'
+    path: '/glossary'
     sub_menus:
       - name: '쉽고 친근한 기본 용어'
         path: '/glossary/basic'

@@ -35,8 +35,6 @@ export function AppSidebar({ menus, ...props }: SidebarProps) {
   const handleMenuClick = () => {
     if (isMobile) {
       setOpenMobile(false)
-    } else {
-      setOpen(false)
     }
   }
 
@@ -45,7 +43,7 @@ export function AppSidebar({ menus, ...props }: SidebarProps) {
       <SidebarHeader>
         {isMobile ? (
           <div className="flex flex-start items-center gap-2 p-2">
-            <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-white">
+            <div className="flex aspect-square size-8 items-center justify-center rounded-lg">
               <Logo width={32} height={32} />
             </div>
             <div className="flex flex-col gap-0.5 leading-none">
@@ -57,7 +55,7 @@ export function AppSidebar({ menus, ...props }: SidebarProps) {
             <SidebarMenuItem>
               <SidebarMenuButton size="lg" asChild>
                 <Link href="/" onClick={handleMenuClick}>
-                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-white">
+                  <div className="flex aspect-square size-8 items-center justify-center rounded-lg">
                     <Logo width={32} height={32} />
                   </div>
                   <div className="flex flex-col gap-0.5 leading-none">

@@ -37,11 +37,11 @@ export default async function GlossaryCategoryPage({ params }: { params: { categ
   }
 
   return (
-    <div className="p-4 pb-8 max-w-xl">
+    <div className="w-full">
       <div className="mb-6 flex flex-col">
         <h1 className="text-xl font-bold">{meta.title}</h1>
       </div>
-      <div className="space-y-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
         {terms.map((term) => (
           <GlossaryCard
             key={term.name}
