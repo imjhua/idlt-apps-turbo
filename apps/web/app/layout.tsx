@@ -3,10 +3,10 @@ import './globals.css'
 import LoadingSpiner from '@repo/ui/ds/LoadingSpiner'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { headers as nextHeaders } from 'next/headers'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { ReactNode, Suspense } from 'react'
 import { Toaster } from 'sonner'
-import { headers as nextHeaders } from 'next/headers'
 
 import { getMenu } from '@/apis/internal'
 import webConfig from '@/config/web.yaml'
@@ -40,7 +40,7 @@ export default async function RootLayout({
   children: ReactNode
 }>) {
   const headers = await nextHeaders();
-  let baseURL: string | undefined = undefined;
+  let baseURL: string | undefined = '/';
   const protocol = headers.get('x-forwarded-proto') || 'http';
   const host = headers.get('host');
   if (host) baseURL = `${protocol}://${host}`;

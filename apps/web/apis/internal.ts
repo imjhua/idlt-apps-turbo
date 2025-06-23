@@ -1,16 +1,15 @@
 import { Methods, request } from '@/lib/request'
 import { MenuItemType } from '@/types/menu'
 
-const BASE_URL = typeof window === 'undefined' ? process.env.NEXT_PUBLIC_BASE_URL : '/'
 
 /* FIXME: 타입정의시 semicolon 형식 맞추기 - 린트? 프리티어? */
 export type GetMenuRequestType = undefined
 
 export type GetMenuResponseType = { menus: MenuItemType[] }
 
-export const getMenu = async (baseURL?: string) => {
+export const getMenu = async (baseURL: string) => {
   return await request<GetMenuResponseType>({
-    baseURL: baseURL ?? BASE_URL,
+    baseURL: baseURL,
     url: '/api/menus',
     method: Methods.GET,
   })
