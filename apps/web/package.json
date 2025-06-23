@@ -8,7 +8,7 @@
     "env:dev": "cp env/.env.local .env",
     "env:prod": "cp env/.env.production .env",
     "========================================== [DEV]": "",
-    "dev": "pnpm run env:dev && next dev --turbopack --port 8080",
+    "dev": "pnpm run env:dev && next dev --turbopack --port 8080 -H idlt.localhost",
     "build:dev": "pnpm run env:dev && next build",
     "========================================== [BUILD]": "",
     "build": "pnpm lint && pnpm run env:prod && next build",
