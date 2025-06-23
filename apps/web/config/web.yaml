@@ -4,5 +4,5 @@ env:
   prod:
     environmentName: '운영'
 
-profile:
-  email: idltapps@gmail.com
+brand: IDLT Apps
+email: idltapps@gmail.com

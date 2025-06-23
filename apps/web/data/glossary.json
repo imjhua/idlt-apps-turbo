@@ -1,0 +1,149 @@
+[
+  {
+    "term": "Yoga",
+    "korean": "요가",
+    "sanskrit": "योग",
+    "definition": "요가는 연결을 뜻하는 산스크리트어에서 유래했다. '몸과 마음을 하나로 결합하다' 또는 '몸과 마음의 조화'로 해석할 수 있다.",
+    "etymology": "yuj(युज्): 결합하다, 연결하다, 통합하다"
+  },
+  {
+    "term": "Namaste",
+    "korean": "나마스떼",
+    "sanskrit": "नमस्ते",
+    "definition": "내 안의 신성함이 당신 안의 신성함에 경의를 표합니다. 요가 수업에서 자주 쓰이는 이유도 이 표현이 단순한 인사 이상의 존중과 연결의 의미를 담고 있기 때문이며, 일상에서는 '안녕하세요', '안녕히 계세요'처럼 가볍게 사용한다.",
+    "etymology": "'नमः (나마하)' = 경배, 존경, 예배 + 'ते (떼)' = 너에게, 당신에게"
+  },
+  {
+    "term": "Asana",
+    "korean": "아사나",
+    "sanskrit": "आसन",
+    "definition": "신체의 다양한 자세(postures)를 의미하며, 몸과 마음을 안정되게 유지하는 상태.",
+    "etymology": "-"
+  },
+  {
+    "term": "Om",
+    "korean": "옴",
+    "sanskrit": "ॐ",
+    "definition": "몸과 마음의 진동. 우주의 근본적인 소리로, 이 소리가 몸과 마음을 진동시켜 내면의 평화와 연결된다. OM은 단일한 소리처럼 들리지만 실제로는 세 개의 소리가 결합된 것이다. 정신을 집중하거나 에너지를 모으기 위해 사용한다.",
+    "etymology": "A(아) - 창조 (Brahma), U(우) - 유지 (Vishnu), M(음) - 파괴 또는 해탈 (Shiva)"
+  },
+  {
+    "term": "Yin",
+    "korean": "인",
+    "sanskrit": "-",
+    "definition": "중국의 음양(陰陽) 철학에서 유래한 개념으로, 차분하고 느리고 깊은 성질을 지닌 음(陰) 에너지의 속성을 나타낸다. 양(陽)과 대비되는 개념으로 조용하고 수동적인 에너지를 상징한다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Hatha",
+    "korean": "하타",
+    "sanskrit": "हठ",
+    "definition": "신체적 수련. '하'는 해, '타'는 달을 의미하며, 균형을 맞추는 수련을 뜻한다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Vinyasa",
+    "korean": "빈야사",
+    "sanskrit": "विन्यास",
+    "definition": "호흡과 동작의 흐름을 맞추어 수행하는 방식. '순차적 흐름'을 의미한다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Surya Namaskar",
+    "korean": "수리야 나마스카라",
+    "sanskrit": "सूर्य नमस्कार",
+    "definition": "Surya는 태양을 의미하고, Namaskar는 경배를 뜻한다. 수리야 나마스카라는 태양을 경배하는 일련의 동작으로, 12개로 구성된 연속적인 아사나 시퀀스이다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Mantra",
+    "korean": "만트라",
+    "sanskrit": "मन्त्र",
+    "definition": "반복적으로 사용하는 구절이나 소리. 마음을 집중시키고 평정을 얻는 데 도움을 준다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Ashtanga",
+    "korean": "아쉬탕가",
+    "sanskrit": "अष्टाङ्ग",
+    "definition": "고대 인도의 철학자이자 요가 스승인 파탄잘리가 제시한 8단계로 구성된 요가 수련 체계. 몸과 마음의 통합을 목표로 하며, 아사나, 프라나야마, 집중 등 다양한 수행을 통해 영적 깨달음에 이르는 과정을 제시한다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Ujjayi",
+    "korean": "우자이",
+    "sanskrit": "उज्जायी",
+    "definition": "승리의 호흡. 고요한 상태에서 발생하는 부드럽고 깊은 호흡법.",
+    "etymology": "-"
+  },
+  {
+    "term": "Sutra",
+    "korean": "수트라",
+    "sanskrit": "सूत्र",
+    "definition": "짧고 간결한 문장이나 구절로, 지혜나 교훈을 전달하는 철학적 또는 종교적인 문구들을 나타낸다. 요가, 불교, 힌두교 등에서 중요한 경전과 철학적 교훈을 담고 있다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Chakra",
+    "korean": "차크라",
+    "sanskrit": "चक्र",
+    "definition": "직역하면 바퀴, 원, 회전이라는 뜻을 가지고 있다. 신체의 에너지 센터. 총 7개의 주요 차크라가 있으며, 각 차크라는 특정 신체 부위 및 감정에 연결된다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Prana",
+    "korean": "프라나",
+    "sanskrit": "प्राण",
+    "definition": "생명력, 기운. 모든 생명체를 움직이는 에너지이다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Nadi",
+    "korean": "나디",
+    "sanskrit": "नाड़ी",
+    "definition": "몸 안의 프라나(Prana: 생명 에너지)가 흐르는 길로 신체의 에너지 경로이다. 차크라를 연결하는 에너지 통로들이다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Samasthiti",
+    "korean": "사마스디티",
+    "sanskrit": "समस्थिति",
+    "definition": "균형 잡힌 상태 또는 완전한 안정. 몸과 마음의 균형을 맞추고, 안정된 상태로 존재하는 것. 주로 아사나를 시작하거나 끝낼 때 사용된다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Kundalini",
+    "korean": "쿤달리니",
+    "sanskrit": "कुण्डलिनी",
+    "definition": "잠재된 에너지. 척추 아래에 존재하는 에너지가 상향 이동하며 깨어나는 것을 의미한다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Dhyana",
+    "korean": "디야나",
+    "sanskrit": "ध्यान",
+    "definition": "명상. 집중을 통해 마음을 진정시키고 내면의 평화를 찾는 수련이다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Mudra",
+    "korean": "무드라",
+    "sanskrit": "मुद्रा",
+    "definition": "직역하면 봉인하다, 확정짓다. 명상을 할때 무드라는 손의 제스처로 특정한 손 모양으로 에너지를 조절하거나 명상의 집중을 돕는다.",
+    "etymology": "-"
+  },
+  {
+    "term": "Pranayama",
+    "korean": "프라나야마",
+    "sanskrit": "प्राणायाम",
+    "definition": "호흡 조절. '프라나'는 생명력, '야마'는 통제라는 뜻으로, 호흡을 조절해 에너지를 다스리는 기법이다. 정신을 집중하며, 호흡을 통해 에너지(프라나)의 흐름을 조절한다.",
+    "etymology": "푸라카 (Puraka): 들이쉬기, 레차카 (Rechaka): 내쉬기, 쿰박카 (Kumbhaka): 숨 멈춤"
+  },
+  {
+    "term": "Samadhi",
+    "korean": "사마디",
+    "sanskrit": "समाधि",
+    "definition": "초월적 상태. 의식의 완전한 통합 상태로, 명상의 궁극적인 목표.",
+    "etymology": "-"
+  }
+] 

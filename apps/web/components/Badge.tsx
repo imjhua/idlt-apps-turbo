@@ -1,17 +1,25 @@
 import { ReactNode } from 'react'
 
 import { cn } from '@/lib/utils'
+import colorConfig from '@/config/color.yaml'
+import type { ColorConfigType } from '@/types/color'
 
 type BadgeProps = {
   className?: string
   children: ReactNode
+  category?: string
 }
 
-export function Badge({ className, children }: BadgeProps) {
+export function Badge({ className, children, category }: BadgeProps) {
+  const color = category ? (colorConfig as ColorConfigType).categoryStatus[category] : undefined;
+  
   return (
     <span
       className={cn(
         'inline-flex items-center rounded-full h-xsmall px-[10px] text-caption1 font-bold',
+        'px-2 py-0.5',
+        color?.background,
+        color?.text,
         className,
       )}
     >

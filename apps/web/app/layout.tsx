@@ -11,6 +11,8 @@ import { getMenu } from '@/apis/internal'
 import LayoutHandler from '@/handler/LayoutHandler'
 import ReactQueryProviderHandler from '@/handler/ReactQueryProviderHandler'
 
+import ThemeProvider from './ThemeProvider'
+
 const geistSans = localFont({
   src: '../fonts/GeistVF.woff',
   variable: '--font-geist-sans',
@@ -35,14 +37,16 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ReactQueryProviderHandler>
-          <NuqsAdapter>
-            <Suspense fallback={<LoadingSpiner />}>
-              <Toaster richColors />
-              <LayoutHandler menuData={menuData}>{children}</LayoutHandler>
-            </Suspense>
-          </NuqsAdapter>
-        </ReactQueryProviderHandler>
+        <ThemeProvider>
+          <ReactQueryProviderHandler>
+            <NuqsAdapter>
+              <Suspense fallback={<LoadingSpiner />}>
+                <Toaster richColors />
+                <LayoutHandler menuData={menuData}>{children}</LayoutHandler>
+              </Suspense>
+            </NuqsAdapter>
+          </ReactQueryProviderHandler>
+        </ThemeProvider>
       </body>
     </html>
   )

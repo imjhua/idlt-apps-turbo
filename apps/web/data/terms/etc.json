@@ -1,0 +1,20 @@
+[
+  { "name": "Pasa (파사)", "desc": "올가미, 족쇄, 밧줄, 덫", "category": "기타" },
+  { "name": "Raja (라자)", "desc": "왕", "category": "기타" },
+  { "name": "Danda (단다)", "desc": "지팡이, 막대기, 몸뚱이", "category": "기타" },
+  { "name": "Dhanu (다누)", "desc": "활", "category": "기타" },
+  { "name": "Hala (할라)", "desc": "쟁기", "category": "기타" },
+  { "name": "Mala (말라)", "desc": "화환", "category": "기타" },
+  { "name": "Stambha (스탐바)", "desc": "장작", "category": "기타" },
+  { "name": "Tola (톨라)", "desc": "저울", "category": "기타" },
+  { "name": "Vira (비라)", "desc": "영웅", "category": "기타" },
+  { "name": "Vrksa(브륵샤)", "desc": "나무", "category": "기타" },
+  { "name": "Vajra(바즈라)", "desc": "금강석, 번개, 강철", "category": "기타" },
+  { "name": "Mukta(묵타)", "desc": "해탈, 깨달음, 자유로움", "category": "기타" },
+  { "name": "Pavan(파반)", "desc": "바람, 공기", "category": "기타" },
+  { "name": "Padma (파드마)", "desc": "연꽃", "category": "기타" },
+  { "name": "Parigha (파리가)", "desc": "빗장. 문을 닫는데 쓰이는 막대기", "category": "기타" },
+  { "name": "Pincha (핀차)", "desc": "턱, 깃털", "category": "기타" },
+  { "name": "Nau (나우)", "desc": "배, 보트", "category": "기타" },
+  { "name": "Nidra(니드라)", "desc": "수면, 휴식, 깊은 잠", "category": "기타" }
+] 

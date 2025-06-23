@@ -9,7 +9,7 @@ import { isAppError } from '@/errors'
 import { isAxiosError } from '@/lib/request'
 import { WebConfigType } from '@/types/web'
 
-const { profile } = (webConfig as WebConfigType)
+const { email } = (webConfig as WebConfigType)
 
 export default function GlobalError({
   error,
@@ -26,9 +26,7 @@ export default function GlobalError({
     stausCode = error.response.status
 
     if (isAppError(error.response.data)) {
-      const {
-        details: { email, partnerName, role },
-      } = error.response.data
+      // email, partnerName, role 변수 선언 및 할당 부분을 삭제
     }
   }
 
@@ -37,7 +35,7 @@ export default function GlobalError({
       <body className="overflow-y-hidden">
         <header className="flex h-16 shrink-0 items-center gap-2 border-b transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div className="flex flex-1 items-center gap-2 px-3">
-            <div className="ml-auto px-3">{profile.email}</div>
+            <div className="ml-auto px-3">{email}</div>
           </div>
         </header>
         <div className="flex justify-center items-center flex-col h-[calc(100vh-64px)]">
@@ -45,7 +43,7 @@ export default function GlobalError({
             stausCode={stausCode}
             errorMessage={errorMessage}
             redirectElement={
-              <Button variant="outline" className="py-4" asChild>
+              <Button variant="outline" asChild>
                 <Link href="/">홈으로 이동</Link>
               </Button>
             }

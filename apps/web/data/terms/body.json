@@ -1,0 +1,19 @@
+[
+  { "name": "Anga (앙가)", "desc": "팔다리, 육체, 사지 또는 육체의 일부", "category": "신체" },
+  { "name": "Angustha (앙구쉬타)", "desc": "엄지", "category": "신체" },
+  { "name": "Bhuja (부자)", "desc": "팔이나 어깨", "category": "신체" },
+  { "name": "Ganda (간다)", "desc": "얼굴의 모든 면, 뺨, 귀, 양쪽 귀", "category": "신체" },
+  { "name": "Hasta (하스타)", "desc": "손", "category": "신체" },
+  { "name": "Janu (자누)", "desc": "무릎", "category": "신체" },
+  { "name": "Jathara (자타라)", "desc": "복부, 위, 아랫배", "category": "신체" },
+  { "name": "Karna (카르나)", "desc": "귀 (신체 부위)", "category": "신체" },
+  { "name": "Mukha (무카)", "desc": "얼굴, 입", "category": "신체" },
+  { "name": "Pada (파다)", "desc": "발 또는 다리", "category": "신체" },
+  { "name": "Padangustha (파당구쉬타)", "desc": "엄지 발가락 또는 발가락", "category": "신체" },
+  { "name": "Paschima (파스치마)", "desc": "몸의 뒷부분 전체, 또는 서쪽", "category": "신체" },
+  { "name": "Salabha(살라바)", "desc": "메뚜기", "category": "신체" },
+  { "name": "Sarvanga (사르방가)", "desc": "몸 전체", "category": "신체" },
+  { "name": "Setu (세투)", "desc": "다리, 교각", "category": "신체" },
+  { "name": "Sirsa (시르사)", "desc": "머리", "category": "신체" },
+  { "name": "Kandha (칸드하)", "desc": "어깨", "category": "신체" }
+] 

@@ -1,0 +1,28 @@
+categoryStatus:
+  숫자:
+    background: bg-blue-100
+    text: text-blue-800
+  신체:
+    background: bg-green-100
+    text: text-green-800
+  사물:
+    background: bg-gray-100
+    text: text-gray-800
+  기타:
+    background: bg-gray-100
+    text: text-gray-800
+  동물:
+    background: bg-yellow-100
+    text: text-yellow-800
+  차크라:
+    background: bg-purple-100
+    text: text-purple-800
+  기본:
+    background: bg-pink-100
+    text: text-pink-800
+  방향:
+    background: bg-orange-100
+    text: text-orange-800
+  반다:
+    background: bg-red-100
+    text: text-red-800

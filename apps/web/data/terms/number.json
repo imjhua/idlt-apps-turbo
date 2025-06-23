@@ -1,0 +1,12 @@
+[
+  { "name": "Eka (에카)", "desc": "하나", "category": "숫자" },
+  { "name": "Dwi (드위)", "desc": "둘", "category": "숫자" },
+  { "name": "Tri (트리)", "desc": "셋", "category": "숫자" },
+  { "name": "Chatur (차투르)", "desc": "넷", "category": "숫자" }, 
+  { "name": "Panca (판차)", "desc": "다섯", "category": "숫자" },
+  { "name": "Shat (샷)", "desc": "여섯", "category": "숫자" },
+  { "name": "Sapta (쌉타)", "desc": "일곱", "category": "숫자" },
+  { "name": "Ashta (아쉬토)", "desc": "여덟", "category": "숫자" },
+  { "name": "Nava (나바)", "desc": "아홉", "category": "숫자" },
+  { "name": "Dasha (다샤)", "desc": "열", "category": "숫자" }
+] 

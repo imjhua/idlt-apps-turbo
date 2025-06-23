@@ -9,7 +9,7 @@ export default function NotFound() {
       stausCode={404}
       errorMessage="페이지를 찾을 수 없습니다."
       redirectElement={
-        <Button variant="outline" className="py-4" asChild>
+        <Button variant="outline" asChild>
           <Link href="/">홈으로 이동</Link>
         </Button>
       }

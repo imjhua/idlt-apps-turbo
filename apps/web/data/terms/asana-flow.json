@@ -1,0 +1,22 @@
+[
+  { "name": "Adho (아도)", "desc": "아래로 향하는" },
+  { "name": "Ardha (아르다)", "desc": "절반, 반, 반쪽" },
+  { "name": "Baddha (받다)", "desc": "구속된, 잡힌, 억제된, 확고한" },
+  { "name": "Laghu (라구)", "desc": "작은" },
+  { "name": "Parivarta (파리브르타)", "desc": "회전된" },
+  { "name": "Parsva (파르스바)", "desc": "옆, 측면, 옆구리" },
+  { "name": "Paschima (파스치마)", "desc": "몸의 뒷면, 또는 서쪽(저물어가는 태양)" },
+  { "name": "Pida (피다)", "desc": "아픔, 고통, 압박" },
+  { "name": "Prasarita (프라사리타)", "desc": "펼쳐진, 넓혀진" },
+  { "name": "Purva (푸르바)", "desc": "몸의 앞면, 또는 동쪽(새로운 시작과 빛의 출발지점)" },
+  { "name": "Purna (푸르나)", "desc": "완전한, 전체의, 완전하게 충족된, 완성된" },
+  { "name": "Salamba (살람바)", "desc": "받쳐주는, 지지하는" },
+  { "name": "Supta (숩타)", "desc": "수면, 누운" },
+  { "name": "Tada (타다)", "desc": "산, 수직으로 올라가는" },
+  { "name": "Urdhva (우르드바)", "desc": "위쪽으로 향하는, 상승되는" },
+  { "name": "Utkata (욷카타)", "desc": "강력한, 격렬한" },
+  { "name": "Uttana (욷타나)", "desc": "뻗쳐진, 늘어나는" },
+  { "name": "Utthita (우티타)", "desc": "뻗은, 확장된, 곧게 뻗은" },
+  { "name": "Upavistha (우파비스타)", "desc": "앉혀진, 앉은" },
+  { "name": "Viparita (비파리타)", "desc": "반대 방향으로, 거꾸로" }
+] 

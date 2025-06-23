@@ -8,24 +8,19 @@
 # 4. 경로는 `route.yaml` 파일을 참고하세요.
 
 menus:
-  - name: '대시보드'
-    icon: 'layout-dashboard'
+  - name: '요가 용어집'
+    icon: 'book-text'
+    path: '/'
     sub_menus:
-      - name: '대시보드'
-        path: '/dashboard'
-
-  - name: '관리'
-    icon: 'server'
-    sub_menus:
-      - name: 'A 관리'
-        path: '/test/a'
-      - name: 'B 관리'
-        path: '/test/b'
-      - name: 'C 관리'
-        path: '/test/c'
-
-  - name: '계정 관리'
-    icon: 'users'
-    sub_menus:
-      - name: '계정 관리'
-        path: '/account/list'
+      - name: '쉽고 친근한 기본 용어'
+        path: '/glossary/basic'
+      - name: '에너지 흐름과 관련된 차크라'
+        path: '/glossary/chakra'
+      - name: '몸의 중심을 조이는 반다'
+        path: '/glossary/bandha'
+      - name: '아사나의 흐름과 방향'
+        path: '/glossary/asana-flow'
+      - name: '자세에 영감을 준 동물들'
+        path: '/glossary/animal'
+      - name: '숫자, 신체 부위 그리고 일반 용어'
+        path: '/glossary/number-body-etc'
