@@ -9,6 +9,7 @@
     "build": "pnpm --filter web build",
     "start": "pnpm --filter web start",
     "========================================== [ETC]": "",
+    "git": "git add . && git commit -m 'feat: add' && git push",
     "test": "pnpm lint && pnpm check-types && pnpm --filter web build:dev",
     "lint": "turbo run lint",
     "check-types": "turbo run check-types",
